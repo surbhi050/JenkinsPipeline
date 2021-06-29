@@ -12,6 +12,7 @@ pipeline {
         stage('test stage') {
           steps {
             echo 'testing phase'
+            echo '"projectname $projectname"'
           }
         }
 
@@ -26,6 +27,6 @@ pipeline {
 
   }
   environment {
-    testing = ''
+    projectname = 'jenkinspipeline'
   }
 }
