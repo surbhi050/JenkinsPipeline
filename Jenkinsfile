@@ -12,13 +12,13 @@ pipeline {
         stage('test stage') {
           steps {
             echo 'testing phase'
-            echo "projectname $projectname"
+            echo "projectname ${projectname}"
           }
         }
 
         stage('create file') {
           steps {
-            writeFile(file: 'testfile', text: 'this is automated file')
+            writeFile(file: 'testfile', text: "this is automated file project name ${projectname}")
           }
         }
 
