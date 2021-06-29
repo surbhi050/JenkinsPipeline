@@ -18,7 +18,7 @@ pipeline {
 
         stage('create file') {
           steps {
-            writeFile(file: 'testfile', text: "this is automated file project name ${projectname}")
+            writeFile(file: 'testfile', text: 'this is automated file project name ${projectname}')
           }
         }
 
