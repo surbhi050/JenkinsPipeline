@@ -1,0 +1,23 @@
+pipeline {
+  agent {
+  label 'slave'
+  }
+  stages {
+    
+        stage('Build') {
+          steps {
+            echo 'build stage'
+            sh 'java -version'
+          }
+        }
+
+        stage('test stage') {
+          steps {
+            echo 'testing phase'
+            echo "projectname ${projectname}"
+          }
+        }
+
+       
+}
+}
