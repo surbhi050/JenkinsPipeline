@@ -21,6 +21,7 @@ pipeline {
 
     stage('Deployment phase') {
       steps {
+        input(message: 'please provide approval for deployment', id: 'Ok')
         echo 'deployment phase'
       }
     }
