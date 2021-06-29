@@ -12,7 +12,7 @@ pipeline {
         stage('test stage') {
           steps {
             echo 'testing phase'
-            echo '"projectname $projectname"'
+            echo "projectname $projectname"
           }
         }
 
