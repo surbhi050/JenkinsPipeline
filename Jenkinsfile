@@ -32,6 +32,12 @@ pipeline {
       }
     }
 
+    stage('Archive') {
+      steps {
+        archiveArtifacts 'testfile'
+      }
+    }
+
   }
   environment {
     projectname = 'jenkinspipeline'
