@@ -26,6 +26,9 @@ pipeline {
     }
 
     stage('Deployment phase') {
+      when{
+      branch 'master'
+      }
       steps {
         input(message: 'please provide approval for deployment', id: 'Ok')
         echo 'deployment phase for UAT'
